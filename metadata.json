@@ -1,0 +1,6 @@
+{
+  "name": "Train In App",
+  "description": "AI-Powered Train Search, Recommendation, Live Location & Booking System with station-aware availability, fare calculation, and simulated live tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

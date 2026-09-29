@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0b0f17;
+    color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom rail track dashed pattern */
+.rail-track-pattern {
+  background-image: repeating-linear-gradient(90deg, #374151 0, #374151 12px, transparent 12px, transparent 20px);
+}
+
+/* Print ticket styles */
+@media print {
+  @page {
+    margin: 1cm;
+    size: auto;
+  }
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-ticket-card {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 2px solid #1f2937 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  .printable-ticket-card * {
+    color: #111827 !important;
+    text-shadow: none !important;
+  }
+  .printable-ticket-card .text-white {
+    color: #111827 !important;
+  }
+  .printable-ticket-card .text-amber-400,
+  .printable-ticket-card .text-emerald-400 {
+    color: #1e3a8a !important;
+    font-weight: bold !important;
+  }
+  .printable-ticket-card .bg-slate-950,
+  .printable-ticket-card .bg-slate-900 {
+    background: #f9fafb !important;
+    border-color: #d1d5db !important;
+  }
+}
